@@ -4,48 +4,81 @@
     <meta charset="utf-8">
     <title></title>
     <style>
-        #jsModular{
+        #jsModular {
             height: 100px;
             width: 300px;
             background-color: #aaa;
             margin: 0 auto;
             position: relative;
         }
+
         #jsModular h1 {
             text-align: center;
             padding-top: 30px;
         }
-        #addContainer{
+
+        #peopleModule {
             position: relative;
             margin: 0 auto;
             width: 300px;
         }
-        #addContainer p{
+
+        #peopleModule p {
             text-align: center;
             position: relative;
         }
-        #addContainer input {
+
+        #peopleModule input {
             width: 60%;
         }
-        #addContainer button {
+
+        #peopleModule button {
             float: right;
+        }
+
+        #peopleTemplateUL li {
+            display: inline-block;
+            position: relative;
+            list-style-type: none;
+        }
+
+        .del {
+            height: 20px;
+            width: 26px;
+            border-radius: 10px;
+            background-color: #333;
+            cursor: pointer;
+            color: white;
+            text-align: center;
+            display: inline-block;
         }
     </style>
 </head>
 <body>
 
 <div id="jsModular">
-    <h1 >Modular JS</h1>
+    <h1>Modular JS</h1>
 </div>
 
-<div id="addContainer">
-<p>People</p>
+<div id="peopleModule">
+    <p>People</p>
     <input type="text"/>
     <button>Add person</button>
     <div class="people"></div>
+    <ul id="peopleTemplateUL">
+        <script id="peopleTemplate" type="text/template">
+            {{#people}}
+            <li>
+                {{.}}
+                <div class="del">X</div>
+            </li>
+            {{/people}}
+        </script>
+    </ul>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
