@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        #jsModular{
+            height: 100px;
+            width: 300px;
+            background-color: #aaa;
+            margin: 0 auto;
+            position: relative;
+        }
+        #jsModular h1 {
+            text-align: center;
+            padding-top: 30px;
+        }
+        #addContainer{
+            position: relative;
+            margin: 0 auto;
+            width: 300px;
+        }
+        #addContainer p{
+            text-align: center;
+            position: relative;
+        }
+        #addContainer input {
+            width: 60%;
+        }
+        #addContainer button {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+
+<div id="jsModular">
+    <h1 >Modular JS</h1>
+</div>
+
+<div id="addContainer">
+<p>People</p>
+    <input type="text"/>
+    <button>Add person</button>
+    <div class="people"></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
