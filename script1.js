@@ -1,4 +1,4 @@
-(function(){
+//(function(){
     var people = {
         people: ['Sj','shiva'],
         init: function() {
@@ -27,9 +27,9 @@
             };
             this.$ul.html(Mustache.to_html(this.template,data));
         },
-        addPerson: function() {
+        addPerson: function(value) {
             "use strict";
-            this.people.push(this.$input.val());
+            this.people.push(value || this.$input.val());
             this.render();
             this.$input.val('');
         },
@@ -42,5 +42,5 @@
         }
 
     };
-    people.init()
-})();
+    people.init();
+//})();
