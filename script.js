@@ -11,7 +11,7 @@ var template = $('#peopleTemplate').html();
 (function(){
     "use strict";
     var people = [];
-    var template = $('#peopleTemplate').html();
+    var template = $('#peopleTemplate');
 // to avoid writing html code inside js we are fetching it
     console.log(template);
 // .html() jquery func
